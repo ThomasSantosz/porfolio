@@ -1,0 +1,114 @@
+/* Reset para garantir cobertura total */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #121212;
+  }
+  
+  /* Container do loader cobrindo tudo */
+  .loader-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  
+  .mug {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border: 4px solid #ffffff;
+    border-radius: 0 0 20px 20px;
+    box-sizing: border-box;
+    background: transparent;
+    margin-bottom: 20px;
+  }
+  
+  /* Alça da caneca */
+  .mug::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 20px;
+    width: 20px;
+    height: 35px;
+    border: 4px solid #ffffff;
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+  }
+  
+  /* Vapor */
+  .vapor {
+    position: absolute;
+    bottom: 100%;
+    width: 4px;
+    height: 20px;
+    background: #ffffff;
+    opacity: 0.5;
+    border-radius: 50px;
+    animation: rise 2s infinite ease-in-out;
+  }
+  
+  .vapor1 {
+    left: 20px;
+    animation-delay: 0s;
+  }
+  
+  .vapor2 {
+    left: 35px;
+    animation-delay: 0.3s;
+  }
+  
+  .vapor3 {
+    left: 50px;
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes rise {
+    0% {
+      transform: translateY(0) scaleX(1);
+      opacity: 0.5;
+    }
+    50% {
+      transform: translateY(-15px) scaleX(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-30px) scaleX(1);
+      opacity: 0;
+    }
+  }
+  
+  /* Folha de chá */
+  .leaf {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 12px;
+    height: 20px;
+    background: #4caf50;
+    border-radius: 50% 50% 0 0;
+    transform: rotate(-45deg);
+    box-shadow: 0 0 6px #4caf50;
+  }
+  
+  /* Texto */
+  .loading-text {
+    font-size: 1rem;
+    color: #cccccc;
+    animation: blink 2s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+  
