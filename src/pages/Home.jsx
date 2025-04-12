@@ -8,6 +8,17 @@ import Courses from "../components/Courses";
 import Catalog from "../components/Catalog";
 import Experience from "../components/Experience";
 
+import macBookMockups from '../assets/MackBook-mockups.png';
+
+import HTML5Logo from '../assets/html5.svg';
+import CSS3Logo from '../assets/css3.svg';
+import JavaScriptLogo from '../assets/javascript.svg';
+import PHPLogo from '../assets/php.svg';
+import DatabaseLogo from '../assets/databricks.svg';
+import ReactLogo from '../assets/react.svg';
+
+import project1 from '../assets/projects/project-agrounity.jpg';
+
 const AnimatedSection = ({ children }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -33,13 +44,24 @@ const Home = () => {
 
   const technologieItems = [
     {
-      image: "/src/assets/technologies/react-logo-transparent.png"
+      image: HTML5Logo
     },
     {
-      image: "/src/assets/technologies/node-js-logo.png"
+      image: CSS3Logo
+    },
+    {
+      image: JavaScriptLogo
+    },
+    {
+      image: PHPLogo
+    },
+    {
+      image: DatabaseLogo
+    },
+    {
+      image: ReactLogo
     }
   ];
-
 
 
   const courseItems = [
@@ -96,70 +118,46 @@ const Home = () => {
   ];
 
 
-
   const catalogItems = [
       {
-        image: "/src/assets/projects/project-1.webp",
-        video: "/src/assets/projects/previews/20250406_164031000_iOS.MP4",
+        image: project1,
         title: translations[currentLang].title1,
         description: translations[currentLang].description1,
         tags: translations[currentLang].tags1
-      },
-      {
-        image: "/src/assets/projects/project-2.webp",
-        video: "/src/assets/projects/previews/copy_5F04202B-A81E-4946-A2AB-F58C449693B4.mov",
-        title: translations[currentLang].title2,
-        description: translations[currentLang].description2,
-        tags: translations[currentLang].tags2
-      },
-      {
-        image: "/src/assets/projects/project-3.webp",
-        video: "/src/assets/projects/project-3-preview.mp4",
-        title: translations[currentLang].title3,
-        description: translations[currentLang].description3,
-        tags: translations[currentLang].tags3
-      },
-      {
-        image: "/src/assets/projects/project-4.webp",
-        video: "/src/assets/projects/project-4-preview.mp4",
-        title: translations[currentLang].title4,
-        description: translations[currentLang].description4,
-        tags: translations[currentLang].tags4
       }
     ];
 
 
-
-
   const experienceItems = [
     {
-      image: "/src/assets/projects/project-1.webp",
-      title: translations[currentLang].title1,
-      description: translations[currentLang].description1,
-      tags: translations[currentLang].tags1
+        type: translations[currentLang].yearExperience1,
+        title: translations[currentLang].titleExperience1,
+        business: translations[currentLang].secondTitleExperience1,
+        description: translations[currentLang].descriptionExperience1,
+        tags: translations[currentLang].tagsExperience1
     },
     {
-      image: "/src/assets/projects/project-2.webp",
-      title: translations[currentLang].title2,
-      description: translations[currentLang].description2,
-      tags: translations[currentLang].tags2
+        type: translations[currentLang].yearExperience2,
+        title: translations[currentLang].titleExperience2,
+        business: translations[currentLang].secondTitleExperience2,
+        description: translations[currentLang].descriptionExperience2,
+        tags: translations[currentLang].tagsExperience2
     },
     {
-      image: "/src/assets/projects/project-3.webp",
-      title: translations[currentLang].title3,
-      description: translations[currentLang].description3,
-      tags: translations[currentLang].tags3
+        type: translations[currentLang].yearExperience3,
+        title: translations[currentLang].titleExperience3,
+        business: translations[currentLang].secondTitleExperience3,
+        description: translations[currentLang].descriptionExperience3,
+        tags: translations[currentLang].tagsExperience3
     },
     {
-      image: "/src/assets/projects/project-4.webp",
-      title: translations[currentLang].title4,
-      description: translations[currentLang].description4,
-      tags: translations[currentLang].tags4
+        type: translations[currentLang].yearExperience4,
+        title: translations[currentLang].titleExperience4,
+        business: translations[currentLang].secondTitleExperience4,
+        description: translations[currentLang].descriptionExperience4,
+        tags: translations[currentLang].tagsExperience4
     }
   ];
-
-
-
 
   return (
     <>
@@ -173,7 +171,7 @@ const Home = () => {
                 <button className="learn-more-introduction-home">
                     <a>{translations[currentLang].LearnMoreIntroductionHome}</a>
                 </button>
-                <img src="/src/assets/raviKumarProfile.webp" />
+                <img src={macBookMockups} alt="macOS" />
                 </div>
             </AnimatedSection>
 

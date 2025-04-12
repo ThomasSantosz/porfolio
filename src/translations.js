@@ -5,7 +5,7 @@ const translations = {
         whatWeBelieve: "What We Believe",
         whatWeDo: "What We Do",
         howWeDoIt: "How We Do It",
-        contactUs: "Contact Us",
+        contactUs: "Contact Me",
         welcomeMessage: "Welcome to our website!",
 
         ApresentationTitileHome: "Thomas Santos Ramos",
@@ -66,7 +66,12 @@ const translations = {
 
         CompanyInsights: "Company insights",
 
-        title1: "E-Commerce Website",
+        title1: "Agro-Unity",
+        description1: "Responsive agricultural platform in React.js, with support for multiple languages, optimized for performance and focused on agronomic solutions.",
+
+        tags1: ["React", "Node.js", "CSS", "Agriculture"],
+
+        /*title1: "E-Commerce Website",
         description1: "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
         
         title2: "Task Management App",
@@ -81,7 +86,7 @@ const translations = {
         tags1: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
         tags2: ["HTML", "CSS", "Angular", "Firebase"],
         tags3: ["HTML", "CSS", "React", "Bootstrap"],
-        tags4: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+        tags4: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],*/
 
 
 
@@ -118,7 +123,7 @@ const translations = {
         whatWeBelieve: "No Que Acreditamos",
         whatWeDo: "O Que Fazemos",
         howWeDoIt: "Como Fazemos",
-        contactUs: "Fale Conosco",
+        contactUs: "Entrar em Contato",
         welcomeMessage: "Bem-vindo ao nosso site!",
         
         ApresentationTitileHome: "Thomas Santos Ramos",
@@ -182,7 +187,12 @@ const translations = {
     
         CompanyInsights: "Insights da empresa",
 
-        title1: "Site de E-Commerce",
+        title1: "Agro-Unity",
+        description1: "Plataforma agrícola responsiva em React.js, com suporte a múltiplos idiomas, otimizada para performance e foco em soluções agronômicas.",
+
+        tags1: ["React", "Node.js", "CSS", "Agriculture"],
+
+        /*title1: "Site de E-Commerce",
         description1: "Um site de e-commerce totalmente funcional com recursos como listagem de produtos, carrinho de compras e autenticação de usuário.",
         
         title2: "Aplicativo de Gerenciamento de Tarefas",
@@ -197,7 +207,7 @@ const translations = {
         tags1: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
         tags2: ["HTML", "CSS", "Angular", "Firebase"],
         tags3: ["HTML", "CSS", "React", "Bootstrap"],
-        tags4: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+        tags4: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],*/
 
 
 

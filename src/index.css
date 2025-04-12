@@ -56,7 +56,7 @@ nav {
   display: flex;
   width: 90%;
   align-items: center;
-  margin: 0 3.5em;
+  margin: 0 1.5em;
 }
 
 .navbar.visible {
@@ -82,40 +82,46 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0 0px;
 }
 
 .nav-link {
-  color: white;
+  position: relative;
   text-decoration: none;
   font-size: 14px;
-  position: relative;
-  transition: color 0.3s ease, transform 0.3s ease;
+  color: white;
+  background: transparent;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 5px;
+  padding: 10px 10px;
+  transition: background 0.3s ease; /* color 0.3s ease, transform 0.3s ease */
 }
 
-.nav-link::after {
+/*.nav-link::after {
   content: '';
   position: absolute;
   width: 100%;
   height: 2px;
   color: white;
   background-color: hsl(0, 0%, 80%); /* Cor do efeito hover */
-  bottom: -5px;
+  /*bottom: -5px;
   left: 0;
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease;
-}
+}*/
 
 .nav-link:hover {
-  color: hsl(0, 0%, 80%); /* Cor do texto ao passar o mouse */
-  transform: translateY(-3px); /* Efeito de levantar o texto */
+  color: white;
+  background: hsl(0, 0%, 100%, 0.2);
+  /*transform: translateY(-3px); /* Efeito de levantar o texto */
 }
 
-.nav-link:hover::after {
+/*.nav-link:hover::after {
   transform: scaleX(1); /* Efeito de sublinhado ao passar o mouse */
-  transform-origin: bottom left;
-}
+  /*transform-origin: bottom left;
+}*/
 
 .navbar.top {
   background: linear-gradient(to bottom, hsl(0, 0%, 0%), hsla(0, 0%, 0%, 0.0)) !important;
@@ -275,13 +281,13 @@ nav ul li {
   top: 0;
 }
 
-/*.content .video-of-apresentation img {
+.content .text-definition img {
   display: flex;
   position: relative;
   width: 100%;
   height: 100%;
-  z-index: -10;
-}*/
+  /*z-index: -10;*/
+}
 
 .content .text-definition {
   display: flex;
@@ -357,7 +363,7 @@ nav ul li {
 
 .technologies {
   justify-content: center;
-  padding: 70px 90px;
+  padding: 50px 90px;
 }
 
 .technologies h1 {
@@ -369,7 +375,7 @@ nav ul li {
 .technologies-catalog {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1em));
-  gap: 20px;
+  gap: 10px;
   padding: 0;
   pointer-events: none;
   user-select: none;
@@ -379,13 +385,14 @@ nav ul li {
   display: flex;
   flex-direction: column;
   padding: 15px;
-  border-radius: 8px;
   pointer-events: none;
   user-select: none;
 }
 
 .technologie-image {
-  width: 100px;
+  color: hsl(0, 0%, 80%);
+  background: hsl(0, 0%, 80%);
+  width: 70px;
   height: auto;
   object-fit: cover;
   border-radius: 8px;
@@ -396,8 +403,7 @@ nav ul li {
 
 
 .courses {
-  justify-content: center;
-  padding: 70px 90px;
+  padding: 20px 90px;
 }
 
 .courses h1 {
@@ -408,18 +414,17 @@ nav ul li {
 
 .catalog-course {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 0;
-  pointer-events: none;
+  /*pointer-events: none;
   user-select: none;
-  cursor: default;
+  cursor: default;*/
 }
 
 .course-item {
-  display: flex;
+  /*display: flex;*/
   flex-direction: column;
-  border: 1px solid transparent;
   padding: 15px;
   border-radius: 8px;
   background-color: hsl(0, 0%, 8%);
@@ -430,15 +435,6 @@ nav ul li {
 .course-item:hover {
   background-color: hsl(0, 0%, 10%);
 }
-
-
-/*.course-image {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}*/
 
 .course-content {
   margin: 0;
@@ -658,43 +654,6 @@ nav ul li {
 
 
 
-
-::selection {
-  background: #ffb347; /* Cor de fundo da seleção */
-  color: #000000;       /* Cor do texto selecionado */
-}
-
-
-
-/* Para navegadores baseados em WebKit (Chrome, Safari, Edge) */
-::-webkit-scrollbar {
-  width: 12px; /* Largura da barra de rolagem */
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Cor de fundo da trilha */
-  border-radius: 10px; /* Bordas arredondadas */
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888; /* Cor do "thumb" (a parte que você arrasta) */
-  border-radius: 10px; /* Bordas arredondadas */
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Cor do "thumb" ao passar o mouse */
-}
-
-/* Para Firefox */
-* {
-  scrollbar-width: thin; /* Largura da barra de rolagem */
-  scrollbar-color: #888 #f1f1f1; /* Cor do thumb e da trilha */
-}
-
-
-
-
-
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -743,10 +702,13 @@ nav ul li {
   }
 
   .technologies,
-  .courses,
   .home,
   .experience {
     padding: 40px 20px;
+  }
+  
+  .courses {
+    padding: 20px;
   }
 
   .experience-item {
@@ -837,3 +799,156 @@ nav ul li {
   }
 }
 
+
+
+@media (max-width: 600px) {
+  .contact-container {
+    margin: 40px 20px;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .contact-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .contact-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .technologies,
+  .home,
+  .experience {
+    padding: 40px 20px;
+  }
+
+  .courses {
+    padding: 20px;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .catalog-course {
+    grid-template-columns: 1fr; /* força uma coluna só */
+  }
+
+  .courses {
+    padding: 15px;
+  }
+
+  .course-content h2 {
+    font-size: 1.1em;
+  }
+
+  .course-content p {
+    font-size: 0.95em;
+  }
+}
+
+
+
+
+.contact-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 40px;
+  background: hsl(0, 0%, 20%);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.contact-container h1 {
+  margin-bottom: 20px;
+  color: hsl(0, 0%, 85%);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 1px solid hsl(0, 0%, 35%);
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: hsl(0, 0%, 30%);
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: hsl(244, 100%, 75%, 0.5);
+  background-color: hsl(0, 0%, 35%);
+}
+
+.contact-form button {
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #3730a3;
+  transform: scale(1.02);
+}
+
+/* Toast customizado */
+.custom-toast {
+  background-color: #1f2937 !important; /* fundo escuro (gray-800) */
+  color: #ffffff !important;           /* texto branco */
+  border-radius: 12px !important;
+  font-size: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.custom-toast-body {
+  color: #ffffff !important;
+}
+
+
+::selection {
+  background: #ffb347; /* Cor de fundo da seleção */
+  color: #000000;       /* Cor do texto selecionado */
+}
+
+
+
+/* Para navegadores baseados em WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Cor de fundo da trilha */
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Cor do "thumb" (a parte que você arrasta) */
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Cor do "thumb" ao passar o mouse */
+}
+
+/* Para Firefox */
+* {
+  scrollbar-width: thin; /* Largura da barra de rolagem */
+  scrollbar-color: #888 #f1f1f1; /* Cor do thumb e da trilha */
+}
