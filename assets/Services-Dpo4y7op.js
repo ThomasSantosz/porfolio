@@ -1,0 +1,1 @@
+import{j as e}from"./index-ClYP3EpU.js";const i=()=>e.jsxs("div",{className:"relative min-h-screen",children:[e.jsx("div",{className:"fixed inset-0 z-[-1] bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"}),e.jsx("h1",{children:"Services"}),e.jsx("p",{children:'This is the "Services" page.'})]});export{i as default};
