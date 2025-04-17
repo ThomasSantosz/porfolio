@@ -1,0 +1,1 @@
+const s="/porfolio/assets/services-thumb-BGad-8oZ.png",o="/porfolio/assets/ui-ux-CRhSSVaZ.png",e="/porfolio/assets/cloud-DVb_9Q2d.png",a="/porfolio/assets/analytics-BbnOAwsE.png",c="/porfolio/assets/ai-DC70hrxj.png";export{a,e as b,o as c,s as d,c as s};
