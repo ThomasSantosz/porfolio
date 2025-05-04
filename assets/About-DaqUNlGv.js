@@ -1,4 +1,4 @@
-var Hn=Object.defineProperty;var Wn=(i,t,e)=>t in i?Hn(i,t,{enumerable:!0,configurable:!0,writable:!0,value:e}):i[t]=e;var C=(i,t,e)=>Wn(i,typeof t!="symbol"?t+"":t,e);import{r as K,c as Us,j as x,u as Vn,T as $n}from"./index-B5wDs3Yj.js";import{m as nt,u as Xs}from"./index-CbAfWTAF.js";import{t as Pi}from"./translations-j1V32QaB.js";import{G as re}from"./iconBase-DVKr6RDF.js";import{s as Di}from"./mobile-apps-BaUSPM8G.js";/*!
+var Hn=Object.defineProperty;var Wn=(i,t,e)=>t in i?Hn(i,t,{enumerable:!0,configurable:!0,writable:!0,value:e}):i[t]=e;var C=(i,t,e)=>Wn(i,typeof t!="symbol"?t+"":t,e);import{r as K,c as Us,j as x,u as Vn,T as $n}from"./index-BCVFUX2w.js";import{m as nt,u as Xs}from"./index-CLfS0BtT.js";import{t as Pi}from"./translations-j1V32QaB.js";import{G as re}from"./iconBase-BK4CDuWl.js";import{s as Di}from"./mobile-apps-BaUSPM8G.js";/*!
  * @kurkle/color v0.3.4
  * https://github.com/kurkle/color#readme
  * (c) 2024 Jukka Kurkela
